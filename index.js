@@ -114,6 +114,8 @@ bot.on("ready", async () => {
 bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
+  let sender = message.author;
+  if (!message.content.startsWith(botconfig.prefix)) return;
 
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
@@ -183,4 +185,4 @@ bot.on(`message`, function(message) {
 
 });
 
-bot.login(tokenfile.token);
+bot.login(process.env.BOT_TOKEN);
