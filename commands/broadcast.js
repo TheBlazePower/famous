@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
           .setColor("0x" + "")
           .setTitle("Announcement:")
           .setDescription(text);
-          message.channel.send(message.everyone)
+          message.channel.send(`@everyone`)
           message.channel.send({embed})
 
 }
