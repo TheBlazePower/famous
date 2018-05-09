@@ -107,7 +107,7 @@ bot.on("channelUpdate", async channel => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Type: .help for Help List | Type: .about For Command Information", {type: "PLAYING"});
+  bot.user.setActivity("Type: .help for Help List", {type: "PLAYING"});
 
 });
 
